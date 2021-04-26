@@ -1,0 +1,36 @@
+.bar {
+  background: #106eb9;
+  width: 100%;
+  &__blue {
+    display: flex;
+    width: 100%;
+    &--circle {
+      margin-top: 10px;
+      margin-left: 20px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #56c2d6 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+    &--all {
+      height: 20px;
+      margin-left: 5px;
+      text-align: left;
+      font: normal bold 12px Roboto;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      width: 50%;
+    }
+    &--refresh {
+      height: 20px;
+      margin-right: 20px;
+      text-align: left;
+      font: normal 12px Roboto;
+      color: #ffffff;
+      opacity: 1;
+      width: 50%;
+    }
+  }
+}

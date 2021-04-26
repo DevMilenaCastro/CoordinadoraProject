@@ -1,0 +1,115 @@
+@mixin uptime-p {
+  color: #106eb9;
+  font-size: 12px;
+}
+
+.uptime {
+  margin: 0;
+  &__container {
+    background: #f5f2f2 0% 0% no-repeat padding-box;
+    height: 465px;
+    margin: 0;
+    opacity: 1;
+    width: 100%;
+    .line {
+      background: #f5f2f2;
+      font-size: 1px;
+      opacity: 1;
+      width: 0px;
+    }
+    &--p {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      width: 90%;
+      .uptime,
+      .days {
+        @include uptime-p;
+      }
+      .uptime {
+        font-weight: bold;
+      }
+      .days {
+        width: 80px;
+      }
+    }
+    &--sigo {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      height: auto;
+      margin: 0 auto;
+      opacity: 1;
+      width: 80%;
+      .porcentaje {
+        background: #56c2d6;
+        font-size: 15px;
+        border: 1px solid white;
+      }
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        .app-sigo {
+          font: size 10px;
+        }
+        .circle {
+          display: flex;
+          .up {
+            font: size 10px;
+          }
+          &__circle-up {
+            background: #56c2d6 0% 0% no-repeat padding-box;
+            border-radius: 50%;
+            height: 8px;
+            left: 1018px;
+            margin-right: 5px;
+            opacity: 1;
+            top: 250px;
+            width: 8px;
+          }
+        }
+      }
+    }
+    .overall {
+      &__title {
+        @include uptime-p;
+        display: flex;
+        font-weight: bold;
+        margin-left: 35px;
+        margin-top: 25px;
+      }
+      &__div {
+        align-items: center;
+        background: #094e84 0% 0% no-repeat padding-box;
+        display: flex;
+        height: 87px;
+        justify-content: space-evenly;
+        margin: 0px auto;
+        opacity: 1;
+        width: 80%;
+        &--des {
+          color: #ffffff;
+          font-size: 10px;
+        }
+        .vertical {
+          color: #106eb9;
+          height: 50px;
+          margin: 0;
+          width: 1px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        &__div {
+          &--des {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    &__container {
+      height: 605px;
+    }
+  }
+}
